@@ -1,0 +1,16 @@
+<div class="edit-page">
+  <app-edit-modal *ngIf="editService.isModalOpen"></app-edit-modal>
+  <div class="top">
+    <div class="left"></div>
+    <div class="title">Edit Page</div>
+    <div class="gallery-button">
+      <button (click)="goToGallery()">Go to Gallery</button>
+    </div>
+  </div>
+  <div class="add-pokemon">
+    <app-add-pokemon></app-add-pokemon>
+  </div>
+  <div class="remove-pokemon">
+    <app-remove-pokemon></app-remove-pokemon>
+  </div>
+</div>

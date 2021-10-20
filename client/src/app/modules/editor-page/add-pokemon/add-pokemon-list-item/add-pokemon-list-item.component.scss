@@ -1,0 +1,33 @@
+.add-pokemon-list-item {
+  height: 4rem;
+  border-bottom: 1px solid #ffbf00;
+  border-top: none;
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 1rem;
+
+
+  .name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    min-width: 35%;
+    cursor: pointer;
+  }
+
+  .types {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    gap: 0.5rem;
+    margin-left: 1.4rem;
+
+    .type {
+      cursor: pointer;
+    }
+  }
+}
+
+
+.last-child {
+  border-bottom: none;
+}

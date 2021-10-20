@@ -1,0 +1,14 @@
+<div class="add-pokemon">
+  <div class="text">Add pokemon to gallery :</div>
+  <div class="input">
+    <div class="pokemons-list" *ngIf="inputValue.length > 1 && editService.searchedPokemons.length">
+      <app-add-pokemon-list-item *ngFor="let pokemon of editService.searchedPokemons ;  let last = last"
+                                 [last]="last"
+                                 (changeInput)="changeInput($event)"
+                                 [pokemon]="pokemon"></app-add-pokemon-list-item>
+    </div>
+    <input type="text" class="pokemon-name-input" [(ngModel)]="inputValue" (input)="onChange()">
+    <div class="clear-input" (click)="clearInput()" *ngIf="inputValue.length"><img
+      src="../../../../assets/images/close.png" alt=""></div>
+  </div>
+</div>

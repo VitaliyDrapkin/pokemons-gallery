@@ -1,0 +1,16 @@
+<mat-card>
+  <div class="pokemon-card">
+    <div class="pokemon-name">{{pokemon.name}}</div>
+    <div class="pokemon-image"><img
+      src='{{pokemon.img}}' alt=""/>
+    </div>
+    <div class="pokemon-type">
+      <div class="type-title">Type :</div>
+      <div class="type-value" *ngFor="let type of pokemon.types">{{type}}</div>
+    </div>
+    <div class="pokemon-weight">
+      <div class="weight-title">Weight :</div>
+      <div class="weight-value">{{pokemon.weight}}kg</div>
+    </div>
+  </div>
+</mat-card>

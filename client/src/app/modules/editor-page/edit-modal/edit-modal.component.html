@@ -1,0 +1,13 @@
+<div class="modal">
+  <div class="modal-content">
+    <div class="title" *ngIf="editService.isAddMode">Add {{editService.selectedPokemon?.name}} to the gallery?</div>
+    <div class="title" *ngIf="!editService.isAddMode">Remove {{editService.selectedPokemon?.name}} from gallery?</div>
+    <div class="pokemon-card">
+      <app-pokemon-card [pokemon]="editService.selectedPokemon" *ngIf="editService.selectedPokemon"></app-pokemon-card>
+    </div>
+    <div class="buttons">
+      <button class="cancel" (click)="cancel()">Cancel</button>
+      <button class="confirm" (click)="confirm()">Confirm</button>
+    </div>
+  </div>
+</div>

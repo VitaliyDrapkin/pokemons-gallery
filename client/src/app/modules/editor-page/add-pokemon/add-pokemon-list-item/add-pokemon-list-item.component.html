@@ -1,0 +1,6 @@
+<div class="add-pokemon-list-item" [ngClass]="{'last-child':last}">
+  <div class="name" (click)="selectPokemon()">{{pokemon.name}}</div>
+  <div class="types">
+    <div class="type" *ngFor="let type of pokemon.types" (click)="selectType(type)">{{type}}</div>
+  </div>
+</div>

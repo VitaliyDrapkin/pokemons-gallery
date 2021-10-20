@@ -1,0 +1,18 @@
+<div class='pokemon-list-item' (mouseenter)="onMouseIn()" (mouseleave)="onMouseOut()">
+  <div class="image"><img src="{{pokemon.img}}" alt=""/>
+  </div>
+  <div class="pokemon-info">
+    <div class="name">{{pokemon.name}}</div>
+    <div class="info-weight-types">
+      <div class="weight">
+        <div class="weight-text">Weight :</div>
+        <div class="weight-value"> {{pokemon.weight}}kg</div>
+      </div>
+      <div class="types">
+        <div class="types-text">Type :</div>
+        <div class="type-value" *ngFor="let type of pokemon.types">{{type}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="close-icon" *ngIf="isHover" (click)="removePokemon()"><img src="../../../../../assets/images/close.png" alt=""></div>
+</div>

@@ -1,0 +1,57 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(94, 93, 88, 0.58);
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+  .modal-content {
+    padding: 3rem 3rem 2rem;
+    background-color: white;
+    border-radius: 2rem;
+
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .pokemon-card {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      gap: 1rem;
+
+      button {
+        flex: 1;
+        border-radius: 1rem;
+        border: none;
+        padding: 1rem;
+        font-size: 1.8rem;
+        cursor: pointer;
+        font-weight: bold;
+        margin-top: 1.5rem;
+      }
+
+      .confirm {
+        background: linear-gradient(180deg, #fc8400, #ffda1d);
+      }
+
+      .cancel {
+        color: white;
+        background: linear-gradient(180deg, #ff223b, #e55e1d);
+      }
+    }
+  }
+}

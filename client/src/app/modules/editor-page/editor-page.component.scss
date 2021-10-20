@@ -1,0 +1,42 @@
+.edit-page {
+  padding: 5rem 10rem;
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .left, .gallery-button {
+      flex: 1;
+    }
+
+    .gallery-button {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 3.5rem;
+    }
+
+    .gallery-button button {
+      width: 15rem;
+      height: 4rem;
+      border-radius: 1rem;
+      outline: none;
+      border: none;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      background: linear-gradient(180deg, #fc8400, #ffda1d);
+    }
+
+    .title {
+      font-size: 5rem;
+      font-weight: bold;
+      margin: 0 4rem;
+    }
+  }
+
+  .remove-pokemon {
+    display: flex;
+    justify-content: center;
+  }
+}

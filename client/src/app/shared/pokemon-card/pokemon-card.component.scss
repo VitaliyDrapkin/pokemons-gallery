@@ -1,0 +1,53 @@
+mat-card {
+  width: fit-content;
+  background-color: #fbd806;
+
+
+  .pokemon-card {
+    width: 28rem;
+    height: 38rem;
+    padding: 2rem;
+    background-color: #e5f3ff;
+
+    .pokemon-name {
+      margin-top: 0.5rem;
+      font-size: 2.4rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .pokemon-image {
+      border-radius: 1rem;
+      margin-top: 1.5rem;
+      border: 0.7rem solid #ffe906;
+      background-image: url("../../../assets/images/background-card.jpeg");
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      height: 18rem;
+
+      img {
+        height: 20rem;
+        width: 20rem;
+      }
+    }
+
+    .pokemon-type, .pokemon-weight {
+      padding: 1rem;
+      margin-top: 2rem;
+      display: flex;
+
+      .type-title, .weight-title {
+        font-weight: bold;
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+
+      .type-value, .weight-value {
+        font-size: 1.9rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

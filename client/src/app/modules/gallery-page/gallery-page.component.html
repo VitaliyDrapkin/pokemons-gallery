@@ -1,0 +1,23 @@
+<div class="gallery-page">
+  <div class="top">
+    <div class="search">Search : <input type="text" [(ngModel)]="searchInput"></div>
+    <div class="title">My Gallery</div>
+    <div class="filter">
+      <div class="filter-field">Filter by type :
+        <select [(ngModel)]="selectedType">
+          <option [value]="i" *ngFor="let i of galleryService.allTypes">{{i}}</option>
+        </select>
+      </div>
+      <button class="edit" (click)="goToEdit()">Edit</button>
+    </div>
+  </div>
+  <div class="gallery">
+    <app-pokemon-card
+      *ngFor="let pokemon of galleryService.pokemons | nameFilter : searchInput | typeFilter : selectedType"
+      [pokemon]="pokemon"></app-pokemon-card>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+    <div class="empty"></div>
+  </div>
+</div>

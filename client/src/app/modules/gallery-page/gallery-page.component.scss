@@ -1,0 +1,86 @@
+.gallery-page {
+  padding: 5rem 10rem;
+
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      display: flex;
+      justify-content: center;
+    }
+
+    .search, .filter {
+      flex: 1;
+    }
+
+    .search {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .filter-field {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+      }
+
+      select {
+        margin-left: 1rem;
+        padding: 0.3rem 2rem;
+        font-size: 1.8rem;
+      }
+
+      .edit {
+        width: 15rem;
+        height: 4rem;
+        margin-right: 2rem;
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        background: linear-gradient(180deg, #fc8400, #ffda1d);;
+      }
+    }
+
+    .search input {
+      height: 3.5rem;
+      width: 25rem;
+      margin-left: 2rem;
+      border: 0.2rem solid #ffe906;
+      outline: none;
+      font-size: 1.8rem;
+      padding: 0 1rem;
+    }
+
+    .title {
+      font-size: 5rem;
+      font-weight: bold;
+      margin: 0 4rem;
+    }
+  }
+
+  .gallery {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .empty {
+      width: 31rem;
+
+    }
+  }
+}

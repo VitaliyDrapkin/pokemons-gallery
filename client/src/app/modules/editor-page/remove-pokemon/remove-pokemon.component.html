@@ -1,0 +1,6 @@
+<div class="remove-pokemon">
+  <div class="title">Your favorite pokemons</div>
+  <div class="pokemon-list">
+    <app-pokemon-list-item *ngFor="let pokemon of galleryService.pokemons" [pokemon]="pokemon"></app-pokemon-list-item>
+  </div>
+</div>
