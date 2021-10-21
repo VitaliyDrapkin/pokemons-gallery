@@ -1,12 +1,11 @@
 const express = require("express");
-const pokemonsApi = require('../services/pokemons-api')
 const router = express.Router();
-const editService = require('../services/edit-service')
+const galleryService = require('../services/gallery.service')
 
 
 router.get("/", async (request, response, next) => {
     try {
-        response.send(pokemonsApi.galleryPokemons);
+        response.send(galleryService.getGallery());
     } catch (error) {
         return next(error);
     }
@@ -14,7 +13,7 @@ router.get("/", async (request, response, next) => {
 
 router.post("/", async (request, response, next) => {
     try {
-        editService.addPokemonToGallery(request.body.pokemonName)
+        await galleryService.addPokemonToGallery(request.body.pokemonName)
         response.send({status: 1})
     } catch (error) {
         return next(error);
@@ -22,7 +21,7 @@ router.post("/", async (request, response, next) => {
 });
 router.delete("/:name", async (request, response, next) => {
     try {
-        editService.removePokemonFromGallery(request.params.name)
+        await galleryService.removePokemonFromGallery(request.params.name)
         response.send({status: 1})
     } catch (error) {
         return next(error);
