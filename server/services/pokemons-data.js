@@ -35,8 +35,7 @@ async function addPokemonToGallery(pokemon) {
 }
 
 async function removePokemonFromGallery(pokemon) {
-    const test = await PokemonGallery.findOneAndDelete({name: pokemon.name})
-    console.log(test);
+    await PokemonGallery.findOneAndDelete({name: pokemon.name})
     pokemonsGalleryArray = pokemonsGalleryArray.filter(item => item.name !== pokemon.name)
 }
 

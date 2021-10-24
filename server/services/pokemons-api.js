@@ -7,6 +7,7 @@ async function getPokemonsData() {
                 const pokemon = new Pokemon({
                     name: value.name,
                     img: value.sprites.front_default,
+                    imgBack: value.sprites.back_default,
                     types: value.types.map(item => item.type.name),
                     weight: value.weight * 0.45
                 })
